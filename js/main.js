@@ -38,5 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
         [6,2,7,1,4,0,5,3], [6,3,1,4,7,0,2,5], [6,3,1,7,5,0,2,4], [6,4,2,0,5,7,1,3],
         [7,1,3,0,6,4,2,5], [7,1,4,2,0,6,3,5], [7,2,0,5,1,4,6,3], [7,3,0,2,5,1,6,4]
     ];
-    
+    // Create the chess board
+    function createBoard() {
+        board.innerHTML = '';
+        for (let row = 0; row < 8; row++) {
+          for (let col = 0; col < 8; col++) {
+            const cell = document.createElement('div');
+            cell.classList.add('cell');
+            cell.classList.add((row + col) % 2 === 0 ? 'white' : 'black');
+            cell.dataset.row = row;
+            cell.dataset.col = col;
+            
+            cell.addEventListener('click', () => toggleQueen(row, col, cell));
+            
+            board.appendChild(cell);
+          }
+        }
+      }
 });
