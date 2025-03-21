@@ -12,5 +12,28 @@
       Place 8 queens on the board so that no queen can attack another. 
       Queens can move horizontally, vertically, and diagonally.
     </div>
+    <div class="game-container">
+        <div class="counter">Queens placed: <span id="queensCount">0</span>/8</div>
+        <div class="board" id="chessboard"></div>
+        <div class="status" id="gameStatus"></div>
+        <div class="controls">
+          <button id="checkButton">Check Solution</button>
+          <button id="clearButton">Clear Board</button>
+          <button id="hintButton">Show Hint</button>
+          <button id="solutionButton">Show Solution</button>
+        </div>
+      </div>
+      <div class="info-section">
+        <h2>About the 8 Queens Puzzle</h2>
+        <p>
+          The eight queens puzzle is the problem of placing eight chess queens on an 8×8 chessboard so that no two queens threaten each other.
+          Thus, a solution requires that no two queens share the same row, column, or diagonal.
+        </p>
+        <p>
+          Did you know? There are 92 distinct solutions to the 8 queens puzzle. If solutions that differ only by symmetry operations
+          (rotations and reflections) are counted as one, there are 12 unique solutions.
+        </p>
+        <div id="solutionContainer"></div>
+      </div>
 </body>
 </html>
